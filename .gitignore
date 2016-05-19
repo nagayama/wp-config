@@ -2,3 +2,5 @@ vendor/
 local-config.php
 wp/*
 !wp/.gitkeep
+content/*
+!content/.gitkeep
