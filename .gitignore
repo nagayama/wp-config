@@ -1,0 +1,4 @@
+vendor/
+local-config.php
+wp/*
+!wp/.gitkeep
