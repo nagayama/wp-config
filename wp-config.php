@@ -3,6 +3,7 @@
 include( __DIR__ . '/local-config.php' );
 
 def('WP_ENV', "development" );
+def('CONTENT_PATH', WP_HOME . "content");
 
 def('DB_USER',      'TODO');
 def('DB_PASSWORD',  'TODO');
@@ -19,8 +20,8 @@ def('WP_SITEURL', WP_HOME . WP_DIR);
 def('WPLANG',  "ja");
 def('ABSPATH', __DIR__ . WP_DIR );
 
-def('WP_CONTENT_URL', WP_HOME . "/content");
-def('WP_CONTENT_DIR', __DIR__ . "/content");
+def('WP_CONTENT_URL', WP_HOME . '/' . CONTENT_PATH);
+def('WP_CONTENT_DIR', __DIR__ . '/' . CONTENT_PATH);
 
 def('WP_POST_REVISIONS' ,false);
 
