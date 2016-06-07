@@ -3,15 +3,15 @@
 include( __DIR__ . '/local-config.php' );
 
 def('WP_ENV', "development" );
-def('CONTENT_PATH', WP_HOME . "content");
+def('CONTENT_PATH', "content");
 
 def('DB_USER',      'TODO');
 def('DB_PASSWORD',  'TODO');
 def('DB_NAME',      'TODO');
 def('DB_HOST',      'localhost');
 
-if ( isset($_SERVER['SERVER_NAME']) ) {
-  def('WP_HOME', 'http://'.$_SERVER['SERVER_NAME']);
+if ( isset($_SERVER['HTTP_HOST']) ) {
+  def('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
 }
 
 def('WP_DIR', "/wp/");
