@@ -43,7 +43,7 @@ def('NONCE_SALT',       sha1(__FILE__.__LINE__));
 def('AUTOMATIC_UPDATER_DISABLED' ,true);
 def('DISALLOW_FILE_EDIT'         ,true);
 
-switch (getenv('WP_ENV')) {
+switch (WP_ENV) {
 case 'development':
   ini_set('display_errors', 1);
   def('SAVEQUERIES', true);
